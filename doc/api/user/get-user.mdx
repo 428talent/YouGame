@@ -1,0 +1,58 @@
+---
+name: 获取用户
+menu: 用户
+---
+
+### 获取游戏
+获取用户信息  
+### 请求
+地址:`/api/user/:userId [get]`
+
+#### 参数信息
+
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| :userId | path | 是 | 要获取的用户Id |
+
+### 相应
+
+#### 示例
+```json
+{
+    "id": 3,
+    "username": "******@gmail.com",
+    "last_login": 1542083113,
+    "create_at": 1540712516,
+    "profile": {
+        "nickname": "******",
+        "email": "",
+        "avatar": "static/upload/user/avatar/a228b09a7ca497d3a0c169272ab4c9ab.jpg",
+        "update_at": 1541715014
+    }
+}
+```
+
+#### Property
+##### Game
+| 名称 |类型|备注|
+|---|---|---|---|
+| id | number |  id |
+| username | string |  游戏名 |
+| intro | string |  介绍 |
+| band | string | 游戏图标 |
+| release_time | number | 发售时间（Unix）|
+| tags | array | 游戏标签|
+| preview_images | array | 预览图片 |
+| goods | array | 商品信息 |
+
+
+##### tag 
+| 名称 |类型|备注|
+|---|---|---|---|
+| name | string |  游戏名 |
+| intro | string |  介绍 |
+| band | string | 游戏图标 |
+| release_time | number | 发售时间（Unix）|
+| tags | array | 游戏标签|
+| preview_images | array | 预览图片 |
+| goods | array | 商品信息 |

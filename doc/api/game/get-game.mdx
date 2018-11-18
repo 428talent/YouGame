@@ -1,0 +1,80 @@
+---
+name: 获取游戏
+menu: 游戏
+---
+
+## 获取游戏
+获取游戏信息  
+### 请求
+地址:`/api/game/:gameId [get]`
+
+#### 参数信息
+
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| :gameId | path | 否 | 要获取的游戏Id |
+
+### 相应
+
+#### 示例
+```json
+{
+    "id":1,
+    "name":"Game Name",
+    "intro":"...",
+    "band":"static/upload/img/217d2f40186a6a4c7770601bd344b53c.jpg",
+    "release_time": 000000000,
+    "tags":[
+        {
+            "name":"tag1",
+            "id":1
+        },
+         {
+            "name":"tag2",
+            "id":2
+        }
+    ],
+    "preview_images":[
+        {
+            "id":"1",
+            "path":"static/upload/img/0de5d2fd9e2b257a350c1fcb35bd67ef.jpg"
+        },
+        {
+            "id":"2",
+            "path":"static/upload/img/0de5d2fd9e2b257a350c1rerferd67ef.jpg"
+        },
+    ]
+     "goods": [
+        {
+            "id": 1,
+            "name": "标准版",
+            "price": 124,
+        },
+    ],
+}
+```
+
+#### Property
+##### Game
+| 名称 |类型|备注|
+|---|---|---|---|
+| id | number |  id |
+| name | string |  游戏名 |
+| intro | string |  介绍 |
+| band | string | 游戏图标 |
+| release_time | number | 发售时间（Unix）|
+| tags | array | 游戏标签|
+| preview_images | array | 预览图片 |
+| goods | array | 商品信息 |
+
+
+##### tag 
+| 名称 |类型|备注|
+|---|---|---|---|
+| name | string |  游戏名 |
+| intro | string |  介绍 |
+| band | string | 游戏图标 |
+| release_time | number | 发售时间（Unix）|
+| tags | array | 游戏标签|
+| preview_images | array | 预览图片 |
+| goods | array | 商品信息 |
