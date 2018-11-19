@@ -1,0 +1,40 @@
+---
+name: 获取列表
+menu: 通用
+---
+
+## 获取列表
+当获取多数据项时使用列表数据进行包装
+
+#### 示例
+```json
+{
+    "count": 1,
+    "page": 1,
+    "page_size": 10,
+    "result": [
+        {
+            "id": 7,
+            "good": {
+                "id": 1,
+                "name": "标准版",
+                "price": 124
+            },
+            "game": {
+                "id": 1,
+                "name": "...",
+                "band": "static/upload/img/217d2f40186a6a4c7770601bd344b53c.jpg"
+            },
+            "created": 1540506718
+        }
+    ]
+}
+```
+
+#### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| count | number |  数量 |
+| page | number |  页码 |
+| page_size | number |  一页的数量 |
+| result | array |结果 |

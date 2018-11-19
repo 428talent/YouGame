@@ -1,0 +1,66 @@
+---
+name: 获取用户购物车
+menu: 用户
+---
+
+### 获取用户购物车商品信息
+获取用户购物车商品信息
+### 请求
+地址:`/api/user/:userId/carts [get]`
+
+#### 参数信息
+
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| :userId | path | 是 | 要获取的用户Id |
+
+### 相应
+
+#### 示例
+```json
+{
+    "count": 1,
+    "page": 1,
+    "page_size": 10,
+    "result": [
+        {
+            "id": 7,
+            "good": {
+                "id": 1,
+                "name": "标准版",
+                "price": 124
+            },
+            "game": {
+                "id": 1,
+                "name": "Assassin's Creed® Odyssey",
+                "band": "static/upload/img/217d2f40186a6a4c7770601bd344b53c.jpg"
+            },
+            "created": 1540506718
+        }
+    ]
+}
+```
+
+#### Property
+##### Cart
+| 名称 |类型|备注|
+|---|---|---|---|
+| id | number |  id |
+| good | object |  商品 |
+| game | string |  游戏 |
+| created | number |  创建时间 |
+
+
+##### Good
+| 名称 |类型|备注|
+|---|---|---|---|
+| id | number |  商品ID |
+| name | string |  商品名 |
+| price | number | 价格 |
+
+##### Good
+| 名称 |类型|备注|
+|---|---|---|---|
+| id | number |  ID |
+| name | string |  游戏名 |
+| band | string | 图标 |
