@@ -1,0 +1,32 @@
+---
+name: Link
+menu: 通用
+---
+
+## Link
+获取数据时会给出关联的数据请求地址
+
+#### 示例
+```json
+ {
+     "link": [
+                {
+                    "href": "http://127.0.0.1:8888/api/order/8/goods",
+                    "rel": "goods",
+                    "type": "GET"
+                },
+                {
+                    "href": "http://127.0.0.1:8888/api/user/3",
+                    "rel": "user",
+                    "type": "GET"
+                }
+        ]
+ }
+```
+
+#### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| href | string |  请求地址 |
+| rel | string |  资源 |
+| type | string |  请求类型 |
