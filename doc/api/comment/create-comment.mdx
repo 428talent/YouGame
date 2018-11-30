@@ -1,0 +1,72 @@
+---
+name: 创建评论
+menu: Comment
+---
+
+## 获取评论列表
+创建评论 
+
+### Request
+url:`/api/good/:goodId/comments [get]`
+
+#### Authorization
+需要在Header添加身份信息
+
+#### Parameters
+
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| good | path | 是 | 商品ID |
+
+
+#### ReqeustBody
+
+##### Example
+```json
+{
+	"content":"some comment with this good",
+	"evaluation":"Positive"
+}
+```
+
+##### Property
+
+| 名称 |类型|备注|
+|---|---|---|---|
+| content | string |  评论内容 |
+| evaluation | string |  评价 |
+
+---
+
+### Response
+
+#### Example
+```json
+{
+    "id": 6,
+    "user_id": 3,
+    "good_id": 3,
+    "content": "some comment with this good",
+    "evaluation": "Positive",
+    "create_at": 1543502992,
+    "update_at": 1543502992,
+    "link": [
+        {
+            "href": "http://127.0.0.1:8888/api/user/3",
+            "rel": "user",
+            "type": "GET"
+        },
+        {
+            "href": "http://127.0.0.1:8888/api/good/3",
+            "rel": "good",
+            "type": "GET"
+        }
+    ]
+}
+```
+
+#### Property
+
+Comment定义[参见](/model-comment)
+
+Link定义[参见](/general-link)
