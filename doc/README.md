@@ -5,4 +5,4 @@
 
 ## API在线文档
 
-[地址](https://upbeat-leavitt-f1498d.netlify.com/home)
+[地址](https://upbeat-leavitt-f1498d.netlify.com)
