@@ -1,0 +1,51 @@
+---
+name: 获取购物车
+menu: Cart
+---
+
+## 获取获取购物车内容
+获取购物车列表
+### 请求
+地址:`/api/user/:id/cart [get]`
+
+#### 参数信息
+
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| user | query | 否 | 按照`用户ID`过滤 |
+| game | query | 否 | 按照`游戏ID`过滤 |
+| good | query | 否 | 按照`商品ID`过滤 |
+
+### 响应
+
+#### 示例
+```json
+{
+    "id": 2,
+    "user_id": 3,
+    "good_id": 1,
+    "content": "测试评论",
+    "evaluation": "Positive",
+    "create_at": 1541582649,
+    "update_at": 1541582649,
+    "link": [
+        {
+            "href": "http://127.0.0.1:8888/api/user/3",
+            "rel": "user",
+            "type": "GET"
+        },
+        {
+            "href": "http://127.0.0.1:8888/api/good/1",
+            "rel": "good",
+            "type": "GET"
+        }
+    ]
+}
+```
+
+#### Property
+列表获取List定义[参见](/general-get-list)
+
+Comment定义[参见](/model-comment)
+
+Link定义[参见](/general-link)

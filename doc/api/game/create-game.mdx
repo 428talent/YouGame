@@ -1,0 +1,84 @@
+---
+name: 创建游戏
+menu: 游戏
+---
+
+## 创建游戏
+创建一个新游戏
+
+---
+
+### Request
+Path:`/api/games [post]`
+
+#### Auth
+`JWT token` in Header
+
+#### body
+
+##### Example
+```json
+
+{
+	"name":"Call of Duty®: WWII",
+	"publisher":"Activision",
+	"price":465.00,
+	"Intro":"Call of Duty® returns to its roots with Call of Duty®: WWII - a breathtaking experience that redefines World War II for a new gaming generation.",
+	"release_time":"2018/12/18"
+}
+
+```
+
+##### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| name | string |  游戏名 |
+| publisher | string |  发行商 |
+| price | number | 显示价格 |
+| release_time | string | 发售时间|
+| intro | string | 简要介绍|
+
+---
+
+### Response
+
+#### example
+```json
+{
+    "id": 9,
+    "name": "Call of Duty®: WWII",
+    "release_time": 1545091200,
+    "publisher": "Activision",
+    "intro": "Call of Duty® returns to its roots with Call of Duty®: WWII - a breathtaking experience that redefines World War II for a new gaming generation.",
+    "Link": [
+        {
+            "href": "http://127.0.0.1:8888/api/game/9/goods",
+            "rel": "goods",
+            "type": "GET"
+        },
+        {
+            "href": "http://127.0.0.1:8888/api/game/9/band",
+            "rel": "band",
+            "type": "GET"
+        },
+        {
+            "href": "http://127.0.0.1:8888/api/game/9/tags",
+            "rel": "tags",
+            "type": "GET"
+        },
+        {
+            "href": "http://127.0.0.1:8888/api/game/9/preview",
+            "rel": "preview_images",
+            "type": "GET"
+        }
+    ]
+}
+```
+
+#### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| id | number |  id |
+| name | string |  游戏名 |
+| intro | string |  介绍 |
+| release_time | number | 发售时间（Unix）|

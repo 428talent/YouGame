@@ -1,0 +1,67 @@
+---
+name: 添加游戏商品
+menu: 游戏
+---
+
+## 添加商品
+给指定的游戏添加商品
+
+---
+
+### Request
+Path:`/api/game/:id/goods [post]`
+
+#### Param
+
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| :id | path | 否 | 游戏Id |
+
+#### Auth
+`JWT token` in Header
+
+#### body
+
+##### Example
+```json
+
+{
+	"name":"首发版",
+	"price":465.00
+}
+```
+
+##### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| name | string |  商品名 |
+| price | number | 价格 |
+
+---
+
+### Response
+
+#### example
+```json
+{
+    "id": 11,
+    "game_id": 1,
+    "name": "首发版",
+    "price": 465,
+    "link": [
+        {
+            "href": "http://127.0.0.1:8888/api/game/1",
+            "rel": "good",
+            "type": "GET"
+        }
+    ]
+}
+```
+
+#### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| id | number |  id |
+| name | string |  游戏名 |
+| game_id | number |  游戏ID |
+| price | number | 价格|
