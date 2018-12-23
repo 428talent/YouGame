@@ -1,0 +1,40 @@
+---
+name: 上传游戏封面
+menu: 游戏
+---
+
+## Summary
+上传指定的游戏封面  
+## Request
+
+### url
+`/api/game/:id/band [put]`
+
+### Auth
+`JWT token` in Header
+
+### Parameter
+
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| :id | path | 是 | 要获取的游戏Id |
+
+### Form
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| image | file | 是 |游戏封面图片文件 |
+
+## Response
+
+### Example
+```json
+{
+    "path": "static/upload/img/c469186d9bb86b890d28c21e7cd62f82.jpg",
+    "Link": []
+}
+```
+
+### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| path | string | 图片url |
