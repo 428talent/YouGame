@@ -1,80 +1,65 @@
 ---
-name: 获取游戏
+name: 获取
 menu: 游戏
 ---
 
-## 获取游戏
+## Summary
 获取游戏信息  
-### 请求
-地址:`/api/game/:gameId [get]`
 
-#### 参数信息
+### Path
+`/api/game/:gameId [get]`
+
+## Request
+
+
+### Parameters
 
 | 名称 |类型|必须|备注|
 |---|---|---|---|
-| :gameId | path | 否 | 要获取的游戏Id |
+| :gameId | path | 是 | 要获取的游戏Id |
 
-### 响应
+## Response
 
-#### 示例
+### Example
 ```json
 {
-    "id":1,
-    "name":"Game Name",
-    "intro":"...",
-    "band":"static/upload/img/217d2f40186a6a4c7770601bd344b53c.jpg",
-    "release_time": 000000000,
-    "tags":[
+    "id": 1,
+    "name": "Assassin's Creed® Odyssey",
+    "release_time": "2018-10-21",
+    "publisher": "Ubisoft",
+    "intro": "Choose your fate in Assassin's Creed® Odyssey. From outcast to living legend, embark on an odyssey to uncover the secrets of your past and change the fate of Ancient Greece.",
+    "link": [
         {
-            "name":"tag1",
-            "id":1
+            "href": "http://127.0.0.1:8888/api/game/1/goods",
+            "rel": "goods",
+            "type": "GET"
         },
-         {
-            "name":"tag2",
-            "id":2
+        {
+            "href": "http://127.0.0.1:8888/api/game/1/band",
+            "rel": "band",
+            "type": "GET"
+        },
+        {
+            "href": "http://127.0.0.1:8888/api/game/1/tags",
+            "rel": "tags",
+            "type": "GET"
+        },
+        {
+            "href": "http://127.0.0.1:8888/api/game/1/preview",
+            "rel": "preview_images",
+            "type": "GET"
         }
-    ],
-    "preview_images":[
-        {
-            "id":"1",
-            "path":"static/upload/img/0de5d2fd9e2b257a350c1fcb35bd67ef.jpg"
-        },
-        {
-            "id":"2",
-            "path":"static/upload/img/0de5d2fd9e2b257a350c1rerferd67ef.jpg"
-        },
     ]
-     "goods": [
-        {
-            "id": 1,
-            "name": "标准版",
-            "price": 124,
-        },
-    ],
 }
 ```
 
-#### Property
-##### Game
+### Property
 | 名称 |类型|备注|
 |---|---|---|---|
 | id | number |  id |
 | name | string |  游戏名 |
 | intro | string |  介绍 |
-| band | string | 游戏图标 |
-| release_time | number | 发售时间（Unix）|
-| tags | array | 游戏标签|
-| preview_images | array | 预览图片 |
-| goods | array | 商品信息 |
+| publisher | string |  发行商 |
+| release_time | string | 发售时间|
 
 
-##### tag 
-| 名称 |类型|备注|
-|---|---|---|---|
-| name | string |  游戏名 |
-| intro | string |  介绍 |
-| band | string | 游戏图标 |
-| release_time | number | 发售时间（Unix）|
-| tags | array | 游戏标签|
-| preview_images | array | 预览图片 |
-| goods | array | 商品信息 |

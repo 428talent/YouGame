@@ -1,0 +1,65 @@
+---
+name: 获取预览
+menu: 游戏
+---
+
+## Summary
+获取指定游戏预览 
+
+### Path
+`/api/game/:gameId/preview [get]`
+
+## Request
+
+
+### Parameters
+
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| :gameId | path | 是 | 要获取的游戏Id |
+
+## Response
+
+### Example
+```json
+{
+    "count": 6,
+    "page": 1,
+    "page_size": 10,
+    "next_page": null,
+    "prev_page": null,
+    "result": [
+        {
+            "path": "static/upload/img/217d2f40186a6a4c7770601bd344b53c.jpg",
+            "link": []
+        },
+        {
+            "path": "static/upload/img/48746c97a4b9a9fe7cf205d81ea87d96.jpg",
+            "link": []
+        },
+        {
+            "path": "static/upload/img/a60e834b81c6b88017870f268a3bd00c.jpg",
+            "link": []
+        },
+        {
+            "path": "static/upload/img/0de5d2fd9e2b257a350c1fcb35bd67ef.jpg",
+            "link": []
+        },
+        {
+            "path": "static/upload/img/136333d2afb938147c3f037a196c54de.jpg",
+            "link": []
+        },
+        {
+            "path": "static/upload/img/c469186d9bb86b890d28c21e7cd62f82.jpg",
+            "link": []
+        }
+    ]
+}
+```
+
+### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| path | string |  url |
+
+

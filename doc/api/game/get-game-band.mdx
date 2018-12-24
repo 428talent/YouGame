@@ -1,0 +1,36 @@
+---
+name: 获取封面
+menu: 游戏
+---
+
+## Summary
+获取指定游戏封面  
+
+### Path
+`/api/game/:gameId/band [get]`
+
+## Request
+
+
+### Parameters
+
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| :gameId | path | 是 | 要获取的游戏Id |
+
+## Response
+
+### Example
+```json
+{
+    "path": "static/upload/img/217d2f40186a6a4c7770601bd344b53c.jpg",
+    "link": []
+}
+```
+
+### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| path | string |  url |
+
+

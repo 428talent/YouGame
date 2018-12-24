@@ -3,64 +3,57 @@ name: 获取用户购物车
 menu: 用户
 ---
 
-### 获取用户购物车商品信息
+## Summary
 获取用户购物车商品信息
-### 请求
-地址:`/api/user/:userId/carts [get]`
+## Request
 
-#### 参数信息
+### Path
+`/api/user/:userId/carts [get]`
+
+### Parameters
 
 | 名称 |类型|必须|备注|
 |---|---|---|---|
 | :userId | path | 是 | 要获取的用户Id |
 
-### 相应
+## Request
 
-#### 示例
+### Example
 ```json
 {
     "count": 1,
     "page": 1,
     "page_size": 10,
+    "next_page": null,
+    "prev_page": null,
     "result": [
         {
             "id": 7,
-            "good": {
-                "id": 1,
-                "name": "标准版",
-                "price": 124
-            },
-            "game": {
-                "id": 1,
-                "name": "Assassin's Creed® Odyssey",
-                "band": "static/upload/img/217d2f40186a6a4c7770601bd344b53c.jpg"
-            },
-            "created": 1540506718
+            "good_id": 1,
+            "user_id": 3,
+            "created": "2018-10-26T06:31:58+08:00",
+            "link": [
+                {
+                    "href": "http://127.0.0.1:8888/api/good/1",
+                    "rel": "good",
+                    "type": "GET"
+                },
+                {
+                    "href": "http://127.0.0.1:8888/api/user/3",
+                    "rel": "user",
+                    "type": "GET"
+                }
+            ]
         }
     ]
 }
 ```
 
-#### Property
-##### Cart
+### Property
+
 | 名称 |类型|备注|
 |---|---|---|---|
 | id | number |  id |
-| good | object |  商品 |
-| game | string |  游戏 |
-| created | number |  创建时间 |
-
-
-##### Good
-| 名称 |类型|备注|
-|---|---|---|---|
-| id | number |  商品ID |
-| name | string |  商品名 |
-| price | number | 价格 |
-
-##### Good
-| 名称 |类型|备注|
-|---|---|---|---|
-| id | number |  ID |
-| name | string |  游戏名 |
-| band | string | 图标 |
+| good_id | number |  商品ID |
+| user_id | number |  用户ID |
+| created | string |  创建时间 |

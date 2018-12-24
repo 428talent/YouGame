@@ -1,0 +1,58 @@
+---
+name: 获取标签
+menu: 游戏
+---
+
+## Summary
+获取指定游戏标签
+
+### Path
+`/api/game/:gameId/tags [get]`
+
+## Request
+
+
+### Parameters
+
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| :gameId | path | 是 | 要获取的游戏Id |
+
+## Response
+
+### Example
+```json
+{
+    "count": 4,
+    "page": 1,
+    "page_size": 10,
+    "next_page": null,
+    "prev_page": null,
+    "result": [
+        {
+            "id": 1,
+            "name": "Open World"
+        },
+        {
+            "id": 2,
+            "name": "Action"
+        },
+        {
+            "id": 3,
+            "name": "RPG"
+        },
+        {
+            "id": 4,
+            "name": "Singleplayer"
+        }
+    ]
+}
+```
+
+### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| id | number |  标签ID |
+| name | string |  标签名称 |
+
+
