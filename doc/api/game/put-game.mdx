@@ -1,0 +1,95 @@
+---
+name: UpdateGame
+menu: Game
+---
+## Summary
+修改指定的游戏信息
+
+---
+
+## Request
+Path:`/api/game/:id [put] [patch]`
+
+Patch:部分更新
+
+Put:完全更新
+### Param
+
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| :id | path | 否 | 游戏Id |
+
+### Auth
+`JWT token` in Header
+
+### body
+#### Example
+```json
+{
+	"name":"new game1",
+	"price":5.99,
+	"release_time":"2018-10-21",
+	"publisher":"R1",
+	"intro":"some intro"
+	
+}
+```
+
+#### Property
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| name | string |Option|  商品名 |
+| price | number |Option| 价格 |
+| release_time |string| Option | 发行时间 |
+| publisher |string| Option | 发行商 |
+|intro|string|Option|简介|
+
+---
+
+## Response
+
+### example
+```json
+{
+    "id": 10,
+    "band": "",
+    "name": "new game1",
+    "release_time": "2018-10-21",
+    "publisher": "R1",
+    "intro": "some intro",
+    "created": "2018-12-27T14:57:10+08:00",
+    "updated": "2018-12-27T14:57:10+08:00",
+    "enable": false,
+    "link": [
+        {
+            "href": "http://127.0.0.1:8888/api/game/10/goods",
+            "rel": "goods",
+            "type": "GET"
+        },
+        {
+            "href": "http://127.0.0.1:8888/api/game/10/band",
+            "rel": "band",
+            "type": "GET"
+        },
+        {
+            "href": "http://127.0.0.1:8888/api/game/10/tags",
+            "rel": "tags",
+            "type": "GET"
+        },
+        {
+            "href": "http://127.0.0.1:8888/api/game/10/preview",
+            "rel": "preview_images",
+            "type": "GET"
+        }
+    ]
+}
+```
+
+### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| id | number |  id |
+| name | string |  游戏名 |
+| game_id | number |  游戏ID |
+| price | number | 价格|
+| band | string | 封面|
