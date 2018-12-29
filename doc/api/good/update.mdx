@@ -1,0 +1,71 @@
+---
+name: UpdateGood
+menu: Good
+---
+## Summary
+修改商品信息
+
+---
+
+## Request
+Path:`/api/good/:id [put] [patch]`
+
+Patch:部分更新
+
+Put:完全更新
+### Param
+
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| :id | path | 是 | 商品Id |
+
+### Auth
+`JWT token` in Header
+
+### body
+#### Example
+```json
+{
+	"name":"首发版",
+	"price":8848
+	
+}
+```
+
+#### Property
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| name | string |Option|  商品名 |
+| price | number |Option| 价格 |
+
+---
+
+## Response
+
+### example
+```json
+{
+    "id": 1,
+    "game_id": 1,
+    "name": "首发版",
+    "price": 8848,
+    "created": "2018-10-24T04:01:03+08:00",
+    "updated": "2018-10-24T04:01:03+08:00",
+    "enable": true,
+    "link": [
+        {
+            "href": "http://127.0.0.1:8888/api/game/1",
+            "rel": "good",
+            "type": "GET"
+        }
+    ]
+}
+```
+
+### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| id | number |  id |
+| name | string |  商品名 |
+| game_id | number |  游戏ID |
+| price | number | 价格|
