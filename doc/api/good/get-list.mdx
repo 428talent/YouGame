@@ -1,0 +1,79 @@
+---
+name: List
+menu: Good
+---
+## Summary
+获取商品列表
+
+---
+
+## Request
+
+### Path
+`/api/goods [get]`
+
+### Parameters
+
+| 名称 |备注|
+|---|---|
+| id |   Id 过滤 |
+| game |  game Id 过滤 |
+
+
+---
+
+
+## Response
+
+### example
+```json
+{
+    "count": 6,
+    "page": 1,
+    "page_size": 2,
+    "next_page": "http://127.0.0.1:8888/api/goods?page=2&pageSize=2",
+    "prev_page": null,
+    "result": [
+        {
+            "id": 1,
+            "game_id": 1,
+            "name": "首发版",
+            "price": 8848,
+            "created": "2018-10-24T04:01:03+08:00",
+            "updated": "2018-10-24T04:01:03+08:00",
+            "enable": true,
+            "link": [
+                {
+                    "href": "http://127.0.0.1:8888/api/game/1",
+                    "rel": "good",
+                    "type": "GET"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "game_id": 1,
+            "name": "黄金版",
+            "price": 248,
+            "created": "2018-10-24T04:02:22+08:00",
+            "updated": "2018-10-24T04:02:22+08:00",
+            "enable": true,
+            "link": [
+                {
+                    "href": "http://127.0.0.1:8888/api/game/1",
+                    "rel": "good",
+                    "type": "GET"
+                }
+            ]
+        }
+    ]
+}
+```
+
+### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| id | number |  id |
+| name | string |  商品名 |
+| game_id | number |  游戏ID |
+| price | number | 价格|

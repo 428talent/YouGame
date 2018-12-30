@@ -1,0 +1,53 @@
+---
+name: Object
+menu: Good
+---
+## Summary
+获取商品
+
+---
+
+## Request
+
+### Path
+`/api/good/:id [get]`
+
+### Parameters
+
+| 名称 |备注|
+|---|---|
+| id |   商品id |
+
+
+---
+
+
+## Response
+
+### example
+```json
+{
+    "id": 1,
+    "game_id": 1,
+    "name": "首发版",
+    "price": 8848,
+    "created": "2018-10-24T04:01:03+08:00",
+    "updated": "2018-10-24T04:01:03+08:00",
+    "enable": true,
+    "link": [
+        {
+            "href": "http://127.0.0.1:8888/api/game/1",
+            "rel": "good",
+            "type": "GET"
+        }
+    ]
+}
+```
+
+### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| id | number |  id |
+| name | string |  商品名 |
+| game_id | number |  游戏ID |
+| price | number | 价格|
