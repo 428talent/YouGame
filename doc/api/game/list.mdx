@@ -1,0 +1,105 @@
+---
+name: List
+menu: Game
+---
+## Summary
+获取游戏列表
+
+---
+
+## Request
+
+### Path
+`/api/games [get]`
+
+### Parameters
+
+| 名称 |备注|
+|---|---|
+| id |   Id 过滤 |
+
+---
+
+
+## Response
+
+### example
+```json
+{
+    "count": 5,
+    "page": 1,
+    "page_size": 2,
+    "next_page": "http://127.0.0.1:8888/api/games?page=2&pageSize=2",
+    "prev_page": null,
+    "result": [
+        {
+            "id": 1,
+            "name": "",
+            "release_time": "2018-10-21",
+            "publisher": "R1",
+            "intro": "some intro",
+            "link": [
+                {
+                    "href": "http://127.0.0.1:8888/api/game/1/goods",
+                    "rel": "goods",
+                    "type": "GET"
+                },
+                {
+                    "href": "http://127.0.0.1:8888/api/game/1/band",
+                    "rel": "band",
+                    "type": "GET"
+                },
+                {
+                    "href": "http://127.0.0.1:8888/api/game/1/tags",
+                    "rel": "tags",
+                    "type": "GET"
+                },
+                {
+                    "href": "http://127.0.0.1:8888/api/game/1/preview",
+                    "rel": "preview_images",
+                    "type": "GET"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Rise of the Tomb Raider™",
+            "release_time": "2018-10-21",
+            "publisher": "Square Enix, Feral Interactive (Mac), Feral Interactive (Linux)",
+            "intro": "Rise of the Tomb Raider: 20 Year Celebration includes the base game and Season Pass featuring all-new content. Explore Croft Manor in the new “Blood Ties” story, then defend it against a zombie invasion in “Lara’s Nightmare”.",
+            "link": [
+                {
+                    "href": "http://127.0.0.1:8888/api/game/2/goods",
+                    "rel": "goods",
+                    "type": "GET"
+                },
+                {
+                    "href": "http://127.0.0.1:8888/api/game/2/band",
+                    "rel": "band",
+                    "type": "GET"
+                },
+                {
+                    "href": "http://127.0.0.1:8888/api/game/2/tags",
+                    "rel": "tags",
+                    "type": "GET"
+                },
+                {
+                    "href": "http://127.0.0.1:8888/api/game/2/preview",
+                    "rel": "preview_images",
+                    "type": "GET"
+                }
+            ]
+        }
+    ]
+}
+```
+
+### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| id | number |  id |
+| name | string |  名称 |
+| release_time |string |  发行时间 |
+| price | number | 价格|
+| publisher | string | 发行商|
+| intro | string | 简介|
