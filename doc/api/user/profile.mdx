@@ -1,0 +1,39 @@
+---
+name: Profile
+menu: User
+---
+
+## Summary
+获取用户资料 
+
+### Path
+`/api/user/:userId/profile [get]`
+
+## Request
+
+### Parameters
+
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| :userId | path | 是 | 要获取的用户Id |
+
+## Response
+
+### Example
+```json
+{
+    "nickname": "ArenTakayama",
+    "email": "",
+    "avatar": "static/upload/user/avatar/cc4c8b904cc006cd4166cabcc7c03050.jpg",
+    "update_at": "2018-11-09T06:10:14+08:00"
+}
+```
+
+### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| nickname | string |  昵称 |
+| email | string |  邮箱 |
+| avatar | string |  头像 |
+| update_at | string | 最后一次更新时间 |
+
