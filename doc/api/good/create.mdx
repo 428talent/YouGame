@@ -1,0 +1,64 @@
+---
+name: Create
+menu: Good
+---
+## Summary
+创建商品
+
+---
+
+## Request
+### Path
+`/api/goods [post]`
+
+### Auth
+`JWT token` in Header
+
+### body
+#### Example
+```json
+{
+	"game_id":2,
+	"name":"标准版",
+	"price":256
+}
+```
+
+#### Property
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| name | string |Require|  商品名 |
+| price | number |Require| 价格 |
+| game_id | number |Require| 游戏ID |
+
+---
+
+## Response
+
+### example
+```json
+{
+    "id": 22,
+    "game_id": 2,
+    "name": "标准版",
+    "price": 256,
+    "created": "2019-01-08T02:09:42+08:00",
+    "updated": "2019-01-08T02:09:42+08:00",
+    "enable": false,
+    "link": [
+        {
+            "href": "http://127.0.0.1:8888/api/game/2",
+            "rel": "good",
+            "type": "GET"
+        }
+    ]
+}
+```
+
+### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| id | number |  id |
+| name | string |  商品名 |
+| game_id | number |  游戏ID |
+| price | number | 价格|
