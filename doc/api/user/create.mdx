@@ -1,0 +1,56 @@
+---
+name: Create
+menu: User
+---
+## Summary
+创建账户
+
+---
+
+## Request
+### Path
+`/api/user [post]`
+
+
+### body
+#### Example
+```json
+{
+	"username":"exampleuser",
+	"password":"123456"
+}
+```
+
+#### Property
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| username | string |Require|  用户名 |
+| password | string |Require| 密码 |
+
+---
+
+## Response
+
+### example
+```json
+{
+    "id": 6,
+    "username": "exampleuser2",
+    "last_login": -62135596800,
+    "create_at": 1546951684,
+    "link": [
+        {
+            "href": "http://127.0.0.1:8888/api/user/6/profile",
+            "rel": "profile",
+            "type": "GET"
+        }
+    ]
+}
+```
+
+### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| id | number |  id |
+| username | string |  用户名 |
+
