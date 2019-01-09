@@ -1,0 +1,66 @@
+---
+name: List
+menu: WishList
+---
+## Summary
+获取愿望单内容
+
+**仅Token所指向的用户**
+
+---
+
+## Request
+
+### Path
+`/api/wishlist [get]`
+
+### Parameters
+
+| 名称 |备注|
+|---|---|
+| game |   Game Id 过滤 |
+
+---
+
+
+## Response
+
+### example
+```json
+{
+    "count": 1,
+    "page": 1,
+    "page_size": 10,
+    "next_page": null,
+    "prev_page": null,
+    "result": [
+        {
+            "id": 7,
+            "user_id": 8,
+            "game_id": 2,
+            "created": "2019-01-09T15:33:45+08:00",
+            "links": [
+                {
+                    "href": "http://127.0.0.1:8888/api/user/8",
+                    "rel": "user",
+                    "type": "GET"
+                },
+                {
+                    "href": "http://127.0.0.1:8888/api/game/2",
+                    "rel": "game",
+                    "type": "GET"
+                }
+            ]
+        }
+    ]
+}
+```
+
+### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| id | number |  id |
+| user_id | number |  用户ID |
+| game_id |number |  游戏ID |
+| created | string | 创建时间|
+

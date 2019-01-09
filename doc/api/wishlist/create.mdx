@@ -1,0 +1,65 @@
+---
+name: Create
+menu: WishList
+---
+## Summary
+添加至愿望单
+
+**添加至Token所指向的用户**
+
+---
+
+## Request
+### Path
+`/api/wishlist [post]`
+
+#### Auth
+`JWT token` in Header
+
+### body
+#### Example
+```json
+{
+	"game_id":2
+}
+```
+
+#### Property
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| game_id | number |Require|  游戏ID |
+
+---
+
+## Response
+
+### example
+```json
+{
+    "id": 7,
+    "user_id": 8,
+    "game_id": 2,
+    "created": "2019-01-09T23:33:45+08:00",
+    "links": [
+        {
+            "href": "http://127.0.0.1:8888/api/user/8",
+            "rel": "user",
+            "type": "GET"
+        },
+        {
+            "href": "http://127.0.0.1:8888/api/game/2",
+            "rel": "game",
+            "type": "GET"
+        }
+    ]
+}
+```
+
+### Property
+| 名称 |类型|备注|
+|---|---|---|---|
+| id | number |  id |
+| user_id | number |  用户ID |
+| game_id | number |  游戏ID |
+| created | string |  创建时间 |
+

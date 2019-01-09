@@ -1,0 +1,36 @@
+---
+name: Delete
+menu: WishList
+---
+## Summary
+删除愿望单中的内容
+
+---
+
+## Request
+### Path
+`/api/wishlist/:id [delete]`
+
+#### Auth
+`JWT token` in Header
+
+
+#### Property
+| 名称 |类型|必须|备注|
+|---|---|---|---|
+| id | number |Require|  愿望单ID |
+
+---
+
+## Response
+
+### example
+```json
+{
+    "success": true,
+    "payload": null
+}
+```
+
+
+
